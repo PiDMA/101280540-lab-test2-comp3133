@@ -1,0 +1,11 @@
+<p>mission-list works!</p>
+
+<app-mission-filter (yearChange)="filterLaunches($event)"></app-mission-filter>
+
+<div *ngFor="let launch of filteredLaunches" (click)="onSelect(launch)">
+  <h2>{{ launch.mission_name }}</h2>
+  <p>Flight Number: {{ launch.flight_number }}</p>
+  <p>Launch Date: {{ launch.launch_date_utc }}</p>
+  <p>Rocket Name: {{ launch.rocket.rocket_name }}</p>
+</div>
+
